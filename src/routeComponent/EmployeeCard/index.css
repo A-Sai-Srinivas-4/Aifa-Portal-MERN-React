@@ -1,46 +1,46 @@
-.card-item{
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    margin: 30px;
-    padding: 20px;
-    list-style-type: none;
-    height: 50%;
-    width: 95%;
-    border-radius: 10px;
-    border-top: 5px solid #44c4a1;
-    box-shadow: 0px 3px 2px 0px;
+.dev-card-item{
+   display: flex;
+   justify-content: flex-start;
+   background-color: rgb(217, 201, 201);
+   padding: 10px;
+   list-style-type: none;
+   border-radius: 10px;
+   border-top: 5px solid #44c4a1;
+   box-shadow: 0px 3px 2px 0px;
+   max-height: 160px;
+   height:100%;
+   width:100%;
+   max-width:370px;
+}
+.dev-image {
+   width: 80px;
+   height: 80px;
+   border-radius: 120px;
+   margin-top: 10px;
+   border: 2px solid black; 
+   margin-right: 20px;
+}
+.emp-card-details{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+.emp-name-card{
+   display: flex;
+}
+.emp-role-card{
+   display: flex;
+   justify-content: flex-start;
+}
+.project_names_card {
+   display: flex;
  }
- 
- .nav-link {
-    font-family: 'Roboto';
-    text-decoration: none;
-    margin: 10px;
-    font-weight: 400;
+.emp-heading {
     font-size: 18px;
-    font-weight: 500;
-    color: black;
-  }
-
- .cards {
-     display: flex;
-     flex-direction: column;
- }
- 
- .image {
-     width: 80px;
-     height: 80px;
-     border-radius: 120px;
-     margin-top: 20px;
-     border: 2px solid black; 
- }
- .heading {
-    font-size: 16px;
 
  }
-
- .discription {
-    font-size: 16px;
- 
+ .emp-description{
+   font-size: 16px;
+   color:rgb(9, 105, 157);
  }
- 

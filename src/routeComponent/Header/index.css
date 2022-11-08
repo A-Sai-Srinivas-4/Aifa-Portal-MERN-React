@@ -1,3 +1,9 @@
+.nav_container {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+}
 .website-logo {
     width: 110px;
   }
@@ -7,19 +13,15 @@
       width: 165px;
     }
   }
-  .nav_container {
-    display: flex;
-    justify-content: center;
-    background-color: whitesmoke;
-  }
+  
   .nav-content {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 90%;
+    justify-content: space-between;
+    width: 100%;
     max-width: 1110px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .nav-link {
     font-family: 'Roboto';

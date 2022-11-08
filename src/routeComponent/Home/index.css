@@ -5,6 +5,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding-left: 40px;
+    margin-bottom: 20px;
   }
   
   @media screen and (min-width: 768px) {
@@ -68,7 +69,7 @@
     }
   }
   
-  .shop-now-button {
+  .website-button {
     width: 60%;
     font-size: 14px;
     font-weight: 400;
@@ -83,7 +84,7 @@
   }
   
   @media screen and (min-width: 768px) {
-    .shop-now-button {
+    .website-button {
       width: 150px;
       font-size: 16px;
     }

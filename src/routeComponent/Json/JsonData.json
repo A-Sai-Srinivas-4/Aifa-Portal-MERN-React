@@ -3,55 +3,85 @@
     {
       "id" : 1,
       "Name": "Nikhil",
-      "Role": "Sr. Developer",
+      "Role": "Sr.Developer",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
       "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
+      "TechStack": "React,Node & P9",
       "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "Transmart",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9"
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "Transmart",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "React,P9"
+        },{
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     },
     {
       "id" : 2,
       "Name": "Raushan",
-      "Role": "Sr. Developer",
+      "Role": "Sr.Developer",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
       "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
+      "TechStack": "React,Node & P9",
       "Employment": "Full Time",
       "Offshore": "True",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PCA",
-      "Projects2_Current_Sprint": "",
-      "Projects2_Next_Release": "20/10/2022",
-      "Projects2_Role": "Developer",
-      "Projects2_Tech_Stack": "React,P9",
-      "Projects2_Allocation": "30%"
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "React,P9",
+          "Allocation": "30%"
         },
-      {
+        {
+          "Name": "PCA",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "React,P9",
+          "Allocation": "30%"
+        }
+      ]
+    },
+    {
       "id" : 3,
       "Name": "Sirisha",
       "Role": "QA",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-.png",
       "Experience": "1 Year",
-      "Tech_Stack": "Manual,TOSCA",
+      "TechStack": "Manual,TOSCA",
       "Employment": "Full Time",
-      "Offshore": "True", 
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "QA",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%"
+      "Offshore": "True",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "QA",
+          "Tech_Stack": "React,P9",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Scrum Master",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+       
+      ]
     },
     {
       "id" : 4,
@@ -59,327 +89,389 @@
       "Role": "Scrum Master",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
       "Experience": "1 Year",
-      "Tech_Stack": "",
+      "TechStack": "",
       "Employment": "Full Time",
       "Offshore": "False",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current Sprint": "",
-      "Projects_Next Release": "20/10/2022",
-      "Projects_Role": "Scrum Master",
-      "Projects_Tech Stack": "",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PAC",
-      "Projects2_Current Sprint": "",
-      "Projects2_Next Release": "20/10/2022",
-      "Projects2_Role": "Scrum Master",
-      "Projects2_Tech Stack": "",
-       "Projects2_Allocation": "30%"
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Scrum Master",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Scrum Master",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     },
     {
       "id" : 5,
-      "Name": "Shiva Kumar",
-      "Role": "Mechine-Learning-Developer",
+      "Name": "Revathi",
+      "Role": "Human Resource manager",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
-      "Experience": "1 Years",
-      "Tech_Stack": "Mechine-Learning,Django,P9",
+      "Experience": "1 Year",
+      "TechStack": "",
       "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "Transmart",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "Mechine-Learning,P9"
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "HR",
+          "Tech_Stack": "",
+          "Allocation": ""
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "",
+          "Tech_Stack": "",
+          "Allocation": ""
+        }
+      ]
     },
     {
-      "id" : 6,
-      "Name": "Raushan",
-      "Role": "Sr. Developer",
-      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
-      "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
-      "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PCA",
-      "Projects2_Current_Sprint": "",
-      "Projects2_Next_Release": "20/10/2022",
-      "Projects2_Role": "Developer",
-      "Projects2_Tech_Stack": "React,P9",
-      "Projects2_Allocation": "30%"
-        },
-      {
       "id" : 7,
-      "Name": "Sirisha",
-      "Role": "QA",
-      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-.png",
-      "Experience": "1 Year",
-      "Tech_Stack": "Manual,TOSCA",
+      "Name": "shiva Jjyothi",
+      "Role": "Technical Lead",
+      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
+      "Experience": "3 Year",
+      "TechStack": "",
       "Employment": "Full Time",
-      "Offshore": "True", 
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "QA",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%"
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     },
     {
       "id" : 8,
-      "Name": "Garima",
-      "Role": "Scrum Master",
+      "Name": "Ramana",
+      "Role": "Manager",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
       "Experience": "1 Year",
-      "Tech_Stack": "",
+      "TechStack": "",
       "Employment": "Full Time",
       "Offshore": "False",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current Sprint": "",
-      "Projects_Next Release": "20/10/2022",
-      "Projects_Role": "Scrum Master",
-      "Projects_Tech Stack": "",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PAC",
-      "Projects2_Current Sprint": "",
-      "Projects2_Next Release": "20/10/2022",
-      "Projects2_Role": "Scrum Master",
-      "Projects2_Tech Stack": "",
-       "Projects2_Allocation": "30%"
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "",
+          "Tech_Stack": "",
+          "Allocation": ""
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Scrum Master",
+          "Tech-Stack": "",
+          "Allocation": ""
+        }
+      ]
     },
     {
       "id" : 9,
-      "Name": "Nikhil",
-      "Role": "Sr. Developer",
+      "Name": "Karunakar",
+      "Role": "Accountant",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
-      "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
+      "Experience": "1 Year",
+      "TechStack": "",
       "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "Transmart",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9"
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "",
+          "Tech_Stack": "",
+          "Allocation": ""
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "",
+          "Tech_Stack": "",
+          "Allocation": ""
+        }
+      ]
     },
     {
       "id" : 10,
-      "Name": "Raushan",
-      "Role": "Sr. Developer",
+      "Name": "Vijay sai",
+      "Role": "Testing",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
-      "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
-      "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PCA",
-      "Projects2_Current_Sprint": "",
-      "Projects2_Next_Release": "20/10/2022",
-      "Projects2_Role": "Developer",
-      "Projects2_Tech_Stack": "React,P9",
-      "Projects2_Allocation": "30%"
-        },
-      {
-      "id" : 11,
-      "Name": "Sirisha",
-      "Role": "QA",
-      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-.png",
       "Experience": "1 Year",
-      "Tech_Stack": "Manual,TOSCA",
+      "TechStack": "",
       "Employment": "Full Time",
-      "Offshore": "True", 
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "QA",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%"
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
+    },
+    {
+      "id" : 11,
+      "Name": "HarshaVardhan",
+      "Role": "Junior software developer",
+      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
+      "Experience": "1 Year",
+      "TechStack": "",
+      "Employment": "Full Time",
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     },
     {
       "id" : 12,
-      "Name": "Garima",
-      "Role": "Scrum Master",
+      "Name": "Lovaraju",
+      "Role": "Junior software developer",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
       "Experience": "1 Year",
-      "Tech_Stack": "",
+      "TechStack": "",
       "Employment": "Full Time",
       "Offshore": "False",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current Sprint": "",
-      "Projects_Next Release": "20/10/2022",
-      "Projects_Role": "Scrum Master",
-      "Projects_Tech Stack": "",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PAC",
-      "Projects2_Current Sprint": "",
-      "Projects2_Next Release": "20/10/2022",
-      "Projects2_Role": "Scrum Master",
-      "Projects2_Tech Stack": "",
-       "Projects2_Allocation": "30%"
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     },
     {
       "id" : 13,
-      "Name": "Nikhil",
-      "Role": "Sr. Developer",
+      "Name": "Sai Srinivas",
+      "Role":"Junior software developer",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
-      "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
+      "Experience": "1 Year",
+      "TechStack": "",
       "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "Transmart",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9"
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     },
     {
       "id" : 14,
-      "Name": "Raushan",
-      "Role": "Sr. Developer",
+      "Name": "Shiva",
+      "Role": "Machine learning developer",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
-      "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
-      "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PCA",
-      "Projects2_Current_Sprint": "",
-      "Projects2_Next_Release": "20/10/2022",
-      "Projects2_Role": "Developer",
-      "Projects2_Tech_Stack": "React,P9",
-      "Projects2_Allocation": "30%"
-        },
-      {
-      "id" : 15,
-      "Name": "Sirisha",
-      "Role": "QA",
-      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-.png",
       "Experience": "1 Year",
-      "Tech_Stack": "Manual,TOSCA",
+      "TechStack": "",
       "Employment": "Full Time",
-      "Offshore": "True", 
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "QA",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%"
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
+    },
+    {
+      "id" : 15,
+      "Name": "Arman",
+      "Role": "Junior software developer",
+      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
+      "Experience": "1 Year",
+      "TechStack": "",
+      "Employment": "Full Time",
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     },
     {
       "id" : 16,
-      "Name": "Garima",
-      "Role": "Scrum Master",
+      "Name": "junidh",
+      "Role": "Machine learning developer",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
       "Experience": "1 Year",
-      "Tech_Stack": "",
+      "TechStack": "",
       "Employment": "Full Time",
       "Offshore": "False",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current Sprint": "",
-      "Projects_Next Release": "20/10/2022",
-      "Projects_Role": "Scrum Master",
-      "Projects_Tech Stack": "",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PAC",
-      "Projects2_Current Sprint": "",
-      "Projects2_Next Release": "20/10/2022",
-      "Projects2_Role": "Scrum Master",
-      "Projects2_Tech Stack": "",
-       "Projects2_Allocation": "30%"
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     },
     {
       "id" : 17,
-      "Name": "Nikhil",
-      "Role": "Sr. Developer",
-      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
-      "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
-      "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "Transmart",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9"
-    },
-    {
-      "id" : 18,
-      "Name": "Raushan",
-      "Role": "Sr. Developer",
-      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
-      "Experience": "4 Years",
-      "Tech_Stack": "React,Node & P9",
-      "Employment": "Full Time",
-      "Offshore": "True",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Next_Release": "20/10/2022",
-      "Projects_Role": "Developer",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PCA",
-      "Projects2_Current_Sprint": "",
-      "Projects2_Next_Release": "20/10/2022",
-      "Projects2_Role": "Developer",
-      "Projects2_Tech_Stack": "React,P9",
-      "Projects2_Allocation": "30%"
-        },
-      {
-      "id" : 19,
-      "Name": "Sirisha",
-      "Role": "QA",
-      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-.png",
-      "Experience": "1 Year",
-      "Tech_Stack": "Manual,TOSCA",
-      "Employment": "Full Time",
-      "Offshore": "True", 
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current_Sprint": "",
-      "Projects_Next_Release": "20/10/2022",
-      "Projects_Role": "QA",
-      "Projects_Tech_Stack": "React,P9",
-      "Projects_Allocation": "30%"
-    },
-    {
-      "id" : 20,
-      "Name": "Garima",
-      "Role": "Scrum Master",
+      "Name": "Sri Laxmi",
+      "Role": "Testing",
       "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
       "Experience": "1 Year",
-      "Tech_Stack": "",
+      "TechStack": "",
       "Employment": "Full Time",
       "Offshore": "False",
-      "Projects_Name": "IAVR Enterprise",
-      "Projects_Current Sprint": "",
-      "Projects_Next Release": "20/10/2022",
-      "Projects_Role": "Scrum Master",
-      "Projects_Tech Stack": "",
-      "Projects_Allocation": "30%",
-      "Projects2_Name": "PAC",
-      "Projects2_Current Sprint": "",
-      "Projects2_Next Release": "20/10/2022",
-      "Projects2_Role": "Scrum Master",
-      "Projects2_Tech Stack": "",
-       "Projects2_Allocation": "30%"
+      "Projects": [
+        {
+          "Name": "IAVR Enterprise",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
+    },{
+      "id" : 18,
+      "Name": "Supriya",
+      "Role": "Junior software developer",
+      "image_url" : "https://www.kindpng.com/picc/m/4-41409_developer-png-png-download-developer-png-no-background.png",
+      "Experience": "1 Year",
+      "TechStack": "",
+      "Employment": "Full Time",
+      "Offshore": "False",
+      "Projects": [
+        {
+          "Name": "Genie-Project",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        },
+        {
+          "Name": "PAC",
+          "Current Sprint": "",
+          "Next Release": "20/10/2022",
+          "Role": "Developer",
+          "Tech_Stack": "",
+          "Allocation": "30%"
+        }
+      ]
     }
   ]
-
-
-
-
-
-
-  

@@ -1,72 +1,36 @@
-
-
-import './index.css'
-//import {Link} from 'react-router-dom'
-import { v4 as uuidv4 } from 'uuid';
-import CardItem from './../CardItem'
-import OldJson from './../OldJson/jsonData.json'
-
-
-
-
+import { v4 as uuidv4 } from "uuid";
+import CardItem from "../CardItem";
+import Data from "../Json/jsonData.json";
+import "./index.css";
 
 const ProjectData = () => {
+  const developer_details = Data.map((eachItems) => {
+    return eachItems.Projects;
+  });
 
-    const developer_details=OldJson.map(eachItems=>{
-    return eachItems.Projects
-    })
+  //console.log(developer_details)
 
-    //console.log(developer_details)
+  const newArray = [];
+  developer_details.map((eachItem) => {
+    let x = eachItem.map((name) => {
+      const y = newArray.push(name.Name);
+      return y;
+    });
+    return x;
+  });
 
-const newArray=[]
-const projectname = developer_details.map(eachItem=>{
+  const uniq_project_names = [...new Set(newArray)];
+  //console.log(uniq_project_names)
 
-
-   let x= eachItem.map((name)=>{
-       const y= newArray.push(name.Name)
-        return y
-    })
-    return x
-})
-
-
-const uniq_project_names = [...new Set(newArray)];
-//console.log(uniq_project_names)
-
-
-
-
-
-
-
-    return(
-
-        <>
-        
-
-        <div className="cards-lists">
-
-        {uniq_project_names.map(eachName => {
-            return (
-
-
-                <CardItem  key={uuidv4()} details={eachName}  />
-                   
-                            
-            )
+  return (
+    <>
+      <div className="project-cards-lists">
+        {uniq_project_names.map((eachName) => {
+          return <CardItem key={uuidv4()} details={eachName} />;
         })}
-        
       </div>
-      
-  
-        </>
+    </>
+  );
+};
 
-    
-
-
-    )
-}
-
-export default ProjectData
-
-
+export default ProjectData;

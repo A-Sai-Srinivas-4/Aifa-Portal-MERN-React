@@ -1,13 +1,11 @@
+import DeveloperData from "../DeveloperData";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
-import ProjectData from "../ProjectData";
-import Sidebar from "../Sidebar/Sidebar";
 import "./index.css";
 
-const Projects = () => (
+const Developers = () => (
   <>
     <div>
-      <Sidebar />
       <div className="project-details-back-container">
         <div className="back-container">
           <Link to="/" className="back-option">
@@ -15,14 +13,12 @@ const Projects = () => (
           </Link>
         </div>
         <div className="project-heading-container">
-          <h1 className="project-heading">Projects</h1>
+          <h1 className="project-heading">Developer-Details</h1>
         </div>
       </div>
-      <div className="projects-container">
-        <ProjectData />
-      </div>
+      <DeveloperData />
     </div>
   </>
 );
 
-export default Projects;
+export default Developers;

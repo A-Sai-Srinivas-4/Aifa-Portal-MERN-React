@@ -1,57 +1,91 @@
-.project-details-card{
-
-    min-height: 100px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-.card{
-
-    padding:30px;
-
-}
-
-.heading-text{
-
-    font-size: 30px;
-
-    color:skyblue;
-
-}
-
-.text{
-
-    font-size: 20px;
-
-    color:skyblue;
-
-}
-
-.text-color{
-
-    color: black;
-
-}
-
-
 .project-details-card {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-
-
-
+    flex-direction: column;
 }
-.card {
+.project-details-back-container{
+    display: flex;
+    align-items: center;
+}
+.back-container{
+    display: inline;
+    align-items: center;
+  }
+.back-option{
+    display: inline;
+    margin-left:50px;
+    color:#fff;
+    border: 2px solid;
     padding: 10px;
-    margin: 20px;
-    box-shadow: 0px 2px 3px 0px;
-    border-top: 5px solid green;
-    width: 400px;
-    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+  }
+.project-heading-container{
+    width:100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .project-heading {
+    text-align: center;
+    color: #fff;
+  }
+.heading-text{
+    font-size: 30px;
+    color:rgb(166, 20, 20);
+}
+
+.text{
+    font-size: 20px;
+    color:skyblue;
+}
+.emp-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px; 
+}
+.emp-card-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(199, 191, 191);
+    margin: 10px;
+    padding: 0px;
+    list-style-type: none;
+    max-height:90%;
+    height:160px;
+    width:330px;
+    border-radius: 8px;
+    border-top: 5px solid #44c4a1;
+    box-shadow: 0px 3px 2px 0px;
+}
+.emp-image{
+    width:80px;
+    border-radius: 120px;
+    margin:5px;
+}
+.emp-card-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.emp-name-card{
+    display: flex;
+}
+.emp-name{
+    font-size: 18px;
+    color:green;
+}
+.emp-role-card{
+    display: flex;
+    justify-content: flex-start;
+}
+.emp-role{
+    font-size: 16px;
+    color:brown;
 }
