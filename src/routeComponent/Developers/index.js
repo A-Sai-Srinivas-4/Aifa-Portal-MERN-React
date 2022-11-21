@@ -1,22 +1,15 @@
 import DeveloperData from "../DeveloperData";
-import { Link } from "react-router-dom";
-import { MdOutlineArrowBackIosNew } from "react-icons/md";
+import Header from "../Header";
 import "./index.css";
 
 const Developers = () => (
   <>
-    <div>
-      <div className="project-details-back-container">
-        <div className="back-container">
-          <Link to="/" className="back-option">
-            <MdOutlineArrowBackIosNew size={25} />
-          </Link>
-        </div>
-        <div className="project-heading-container">
-          <h1 className="project-heading">Developer-Details</h1>
-        </div>
+    <Header />
+    <div className="sidebar-developers-container">
+      <div className="dev-display-details-container">
+        <h1 className="project-heading">Developer-Details</h1>
+        <DeveloperData />
       </div>
-      <DeveloperData />
     </div>
   </>
 );

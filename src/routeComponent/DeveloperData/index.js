@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Data from "../Json/jsonData.json";
+import Data from "../Json/data.json";
 import EmployeeCard from "../EmployeeCard";
 import "./index.css";
 
 const DeveloperData = () => {
   const [search, setSearch] = useState("");
-  const [devList, setDevList] = useState([]);
+  const [devEmpList, setDevEmpList] = useState([]);
 
   useEffect(() => {
-    setDevList(Data);
+    setDevEmpList(Data.Resources.Empolyee_Details);
   }, [search]);
+
+  //console.log(Data.Resources)
 
   const renderSearchSection = () => (
     <div className="search-container">
@@ -27,7 +29,7 @@ const DeveloperData = () => {
 
   const renderDevList = () => (
     <ul className="dev-cards-list">
-      {devList
+      {devEmpList
         .filter((each) =>
           each.Name.toLowerCase().includes(search.toLowerCase())
         )
@@ -39,76 +41,92 @@ const DeveloperData = () => {
 
   const showDevDetailsByOnSite = (event) => {
     const myArray = [];
-    Data.map(
-      (each) => each.Offshore === event.target.value && [myArray.push(each)]
+    Data.Resources.Empolyee_Details.map(
+      (each) =>
+        each.Details.Advance.Offshore === event.target.value && [
+          myArray.push(each),
+        ]
     );
     myArray.forEach((element) => {
-      setDevList(myArray);
+      setDevEmpList(myArray);
     });
   };
 
   const showDevDetailsByOffshore = (event) => {
     const myArray = [];
-    Data.map(
-      (each) => each.Offshore === event.target.value && [myArray.push(each)]
+    Data.Resources.Empolyee_Details.map(
+      (each) =>
+        each.Details.Advance.Offshore === event.target.value && [
+          myArray.push(each),
+        ]
     );
     myArray.forEach((element) => {
-      setDevList(myArray);
+      setDevEmpList(myArray);
     });
   };
 
   const showDevDetailsByRole = (event) => {
     const myArray = [];
-    Data.map(
+    Data.Resources.Empolyee_Details.map(
       (each) => each.Role === event.target.value && [myArray.push(each)]
     );
     myArray.forEach((element) => {
-      setDevList(myArray);
+      setDevEmpList(myArray);
     });
   };
 
   const DropdownByOnSite = () => {
-    const onsiteDetails = [...new Set(Data.map((e) => e.Offshore === "False" && "False"))];
+    const onsiteDetails = [
+      ...new Set(
+        Data.Resources.Empolyee_Details.map(
+          (e) => e.Details.Advance.Offshore === "False" && "False"
+        )
+      ),
+    ];
 
     console.log(onsiteDetails);
 
     return (
-      
-        <div className="off-shore-button-container">
-          <button
-            className="off-shore-option"
-            onClick={showDevDetailsByOnSite}
-            value="False"
-          >
-            On Site
-          </button>
-        </div>
-     
+      <div className="off-shore-button-container">
+        <button
+          className="off-shore-option"
+          onClick={showDevDetailsByOnSite}
+          value="False"
+        >
+          On Site
+        </button>
+      </div>
     );
   };
 
   const DropdownByOffshore = () => {
-    const offshoreDetails = [...new Set(Data.map((e) => e.Offshore && "True"))];
+    const offshoreDetails = [
+      ...new Set(
+        Data.Resources.Empolyee_Details.map(
+          (e) => e.Details.Advance.Offshore && "True"
+        )
+      ),
+    ];
 
     console.log(offshoreDetails);
 
     return (
-      
-        <div className="off-shore-button-container">
-          <button
-            className="off-shore-option"
-            onClick={showDevDetailsByOffshore}
-            value="True"
-          >
-            Off Shore
-          </button>
-        </div>
-     
+      <div className="off-shore-button-container">
+        <button
+          className="off-shore-option"
+          onClick={showDevDetailsByOffshore}
+          value="True"
+        >
+          Off Shore
+        </button>
+      </div>
     );
   };
 
   const DropdownByRole = () => {
-    const roleDetails = [...new Set(Data.map((e) => e.Role))];
+    const roleDetails = [
+      ...new Set(Data.Resources.Empolyee_Details.map((e) => e.Role)),
+    ];
 
     //console.log(roleDetails)
 
@@ -120,18 +138,16 @@ const DeveloperData = () => {
           </Dropdown.Toggle>
         </div>
 
-        <Dropdown.Menu>
+        <Dropdown.Menu className="drop-menu-container">
           {roleDetails.map((e) => {
             return (
-              <div>
-                <input
-                  type="button"
-                  className="role-option"
-                  name="Role"
-                  value={e}
-                  onClick={showDevDetailsByRole}
-                />
-              </div>
+              <input
+                type="button"
+                className="role-option"
+                name="Role"
+                value={e}
+                onClick={showDevDetailsByRole}
+              />
             );
           })}
         </Dropdown.Menu>
@@ -146,7 +162,10 @@ const DeveloperData = () => {
           {DropdownByRole()}
           {DropdownByOffshore()}
           {DropdownByOnSite()}
-          <button className="clear-btn" onClick={() => setDevList(Data)}>
+          <button
+            className="clear-btn"
+            onClick={() => setDevEmpList(Data.Resources.Empolyee_Details)}
+          >
             Clear
           </button>
         </div>

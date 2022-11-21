@@ -1,52 +1,52 @@
-.transition{
-    transition:2000ms;  
+.transition {
+  transition: 2000ms;
 }
-.body-color{
-    background-color: rgb(211, 227, 228);
+.body-color {
+  background-color: rgb(211, 227, 228);
 }
 .details_container {
-    padding: 30px;
-    box-shadow: 0px 2px 4px 0px;
-    border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 2px 4px 0px;
+  border-radius: 10px;
 }
 .top_details_container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 10vh;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  margin-top: 20px;
 }
 .pop-image {
-    width: 110px;
-    height: 110px;
-    border-radius: 10px;
-    margin-top: 20px;
-    border: 2px solid black; 
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 2px solid black;
 }
 .pop-card {
-    margin-top: 20px;  
+  margin-top: 20px;
 }
 .pop-heading {
-    font-size: 20px;
+  font-size: 20px;
 }
-.pop-span{
-    color:rgb(5, 84, 175);
-    font-weight: 500;
-    font-size: 17px;
+.pop-span {
+  color: rgb(5, 84, 175);
+  font-weight: 500;
+  font-size: 17px;
 }
-.projects-list{
-    display: flex;
-    flex-wrap: wrap;
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 .pop-project_container {
-    margin-top: 60px;
-    justify-content: flex-start;
-    padding: 10px;
-    box-shadow: 0px 2px 4px 0px;
-    border-radius: 10px;
-    margin-right: 20px;
+  margin-top: 60px;
+  justify-content: flex-start;
+  padding: 10px;
+  box-shadow: 0px 2px 4px 0px;
+  border-radius: 10px;
+  margin-right: 20px;
 }
-.close-btn{
-    display: flex;
-    align-self: center;
+.close-btn {
+  display: flex;
+  align-self: center;
 }

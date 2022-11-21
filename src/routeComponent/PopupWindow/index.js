@@ -4,12 +4,10 @@ import Modal from "react-bootstrap/Modal";
 import "./index.css";
 
 const PopupWindow = (props) => {
-  //console.log(props.cardDetails);
+  //console.log(props.carddetails);
   const data = props.carddetails;
-  console.log(data);
-  const name = data.Name;
-  console.log(name);
-  const projectData = data.Projects;
+  //console.log(data);
+  const projectData = data.Details.Advance.Projects;
   console.log(projectData);
 
   return (
@@ -32,7 +30,7 @@ const PopupWindow = (props) => {
         <>
           <div className="details_container">
             <div className="top_details_container">
-              <img src={data.image_url} alt="" className="pop-image" />
+              <img src={data.Image_url} alt="" className="pop-image" />
               <div className="pop-card">
                 <h6 className="pop-heading">
                   NAME :-<span className="pop-span">{data.Name}</span>
@@ -42,7 +40,9 @@ const PopupWindow = (props) => {
                 </h1>
                 <h1 className="pop-heading">
                   EXPERIENCE :-{" "}
-                  <span className="pop-span">{data.Experience}</span>
+                  <span className="pop-span">
+                    {data.Details.Advance.Experience}
+                  </span>
                 </h1>
               </div>
             </div>
@@ -52,15 +52,14 @@ const PopupWindow = (props) => {
                   <div className="pop-project_container">
                     <h1 className="pop-heading">
                       PROJECTS :
-                      <span className="pop-span">{`${eachItems.Name}`}</span>
+                      <span className="pop-span">{`${eachItems.Project}`}</span>
                     </h1>
                     <h1 className="pop-heading">
-                      Role :{" "}
-                      <span className="pop-span">{`${eachItems.Role}`}</span>
+                      Role : <span className="pop-span">{`${data.Role}`}</span>
                     </h1>
                     <h1 className="pop-heading">
                       Tech_Stack :
-                      <span className="pop-span">{`${eachItems.Tech_Stack}`}</span>
+                      <span className="pop-span">{`${data.Details.Advance.TechStack}`}</span>
                     </h1>
                     <h1 className="pop-heading">
                       Allocation :

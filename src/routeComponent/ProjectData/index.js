@@ -1,32 +1,30 @@
 import { v4 as uuidv4 } from "uuid";
 import CardItem from "../CardItem";
-import Data from "../Json/jsonData.json";
+import Data from "../Json/data.json";
 import "./index.css";
 
 const ProjectData = () => {
-  const developer_details = Data.map((eachItems) => {
-    return eachItems.Projects;
+  const Project_details = Data.Resources.Project_Details.map((eachItems) => {
+    return eachItems;
   });
 
-  //console.log(developer_details)
+  console.log(Project_details);
 
   const newArray = [];
-  developer_details.map((eachItem) => {
-    let x = eachItem.map((name) => {
-      const y = newArray.push(name.Name);
-      return y;
-    });
-    return x;
+  Project_details.map((eachItem) => {
+    const y = newArray.push(eachItem.Name);
+    return y;
   });
 
-  const uniq_project_names = [...new Set(newArray)];
-  //console.log(uniq_project_names)
+  // //console.log(newArray);
+  // const uniq_project_names = [...details,...new Set(newArray)];
+  // //console.log(uniq_project_names)
 
   return (
     <>
       <div className="project-cards-lists">
-        {uniq_project_names.map((eachName) => {
-          return <CardItem key={uuidv4()} details={eachName} />;
+        {Project_details.map((each) => {
+          return <CardItem key={uuidv4()} details={each} />;
         })}
       </div>
     </>

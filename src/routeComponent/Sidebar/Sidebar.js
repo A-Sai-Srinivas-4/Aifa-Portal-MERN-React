@@ -1,43 +1,26 @@
-import React, { useState } from "react";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
-import { SidebarData } from "./SidebarData";
+import React from "react";
+import SplitBasic from "../SplitButton";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import "./Sidebar.css";
 
-function Sidebar() {
-  const [sidebar, setSidebar] = useState(false);
+const GetSidebar = () => (
+  <div className="side-bar-container">
+    <div className="options-container">
+      <Stack spacing={2} direction="column">
+        <Button href="/" variant="text">
+          Home
+        </Button>
 
-  const showSidebar = () => setSidebar(!sidebar);
+        <SplitBasic />
 
-  return (
-    <>
-      <div className="sidebar">
-        <Link to="#" className="menu-bars">
-          <FaIcons.FaBars onClick={showSidebar} />
-        </Link>
-      </div>
-      <nav className={sidebar ? "side-menu active" : "side-menu"}>
-        <ul className="side-menu-items" onClick={showSidebar}>
-          <li className="sidebar-toggle">
-            <Link to="#" className="menu-bars">
-              <AiIcons.AiOutlineClose />
-            </Link>
-          </li>
-          {SidebarData.map((item, index) => {
-            return (
-              <li key={index} className={item.cName}>
-                <Link to={item.path} className="item-color">
-                  <i className="item-icons">{item.icon}</i>
-                  <span className="item-text">{item.title}</span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    </>
-  );
-}
+        <Button href="/developers" variant="text">
+          Developers
+        </Button>
+        <Button variant="text">Support</Button>
+      </Stack>
+    </div>
+  </div>
+);
 
-export default Sidebar;
+export default GetSidebar;

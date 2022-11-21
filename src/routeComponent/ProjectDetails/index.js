@@ -1,98 +1,115 @@
 import { useParams } from "react-router-dom";
-import Data from "../Json/jsonData.json";
-import { Link } from "react-router-dom";
-import { MdOutlineArrowBackIosNew } from "react-icons/md";
-import Sidebar from "../Sidebar/Sidebar";
+import Data from "../Json/data.json";
+import GetSidebar from "../Sidebar/Sidebar";
+import Header from "../Header";
 import "./index.css";
 
 const ProjectDetails = ({ match }) => {
   const { projectname } = useParams();
 
-  const myArray = [];
+  const myObj = {
+    Emp_Details: {
+      Name: [],
+      Role: [],
+      Team: [],
+    },
+    Teams: {
+      Dev_Team: [],
+      QA_Team: [],
+    },
+    Scrum_Master: [],
+    Current_Sprint: [],
+  };
 
-  const fetchData = () => {
-    Data.map((each) =>
-      each.Projects.map(
+  // const fetchProjectData = () => {
+  //   Data.Resources.Project_Details.map(
+  //     (each) =>
+  //       each.Name === projectname &&
+  //       myObj.Teams.Dev_Team.push(each.Details.Advance.Development_Team) &&
+  //       myObj.Teams.QA_Team.push(each.Details.Advance.QA_Team) &&
+  //       myObj.Scrum_Master.push(each.Scrum_Master) &&
+  //       myObj.Current_Sprint.push(each.Current_Sprint)
+  //   );
+
+  //   return myObj;
+  // };
+
+  //const projDetails = fetchProjectData();
+  //console.log(projDetails)
+
+  const fetchEmpData = () => {
+    Data.Resources.Empolyee_Details.map((each) =>
+      each.Details.Advance.Projects.map(
         (e) =>
-          e.Name === projectname &&
-          myArray.push(each.Name) &&
-          myArray.push(each.Role)
+          e.Project === projectname &&
+          myObj.Emp_Details.Name.push(each.Name) &&
+          myObj.Emp_Details.Role.push(each.Role) &&
+          myObj.Emp_Details.Team.push(each.Team)
       )
     );
-    return myArray;
+
+    return myObj;
   };
+  const Details = fetchEmpData();
+  console.log(Details);
 
-  const projDetails = fetchData();
-
-  const Name = [];
-  const Role = [];
-  const details = {};
-
-  for (var i = 0; i < projDetails.length; i++) {
-    if (i % 2 === 0) {
-      // index is even
-      Name.push(projDetails[i]);
-      details.Name = Name;
-    } else {
-      Role.push(projDetails[i]);
-      details.Role = Role;
-    }
-  }
-
-  //console.log(details);
   var data = [];
 
-  Role.forEach((Role, i) => (data = [...data, { Name: Name[i], Role: Role }]));
+  Details.Emp_Details.Role.forEach(
+    (Role, i) =>
+      (data = [
+        ...data,
+        {
+          Name: Details.Emp_Details.Name[i],
+          Role: Role,
+          Team: Details.Emp_Details.Team[i],
+        },
+      ])
+  );
 
-  const randomcolors = () => {
-    return "#" + Math.floor(Math.random() * 26743815).toString(16);
-    //      Adding css  style 26723815 style={{backgroundColor : randomcolors()}}
-  };
+  //console.log(data);
+
+  const getDeptOrder = (e) => <h1 className="emp-name">{e.Name}</h1>;
 
   return (
     <>
-      <div className="project-details-card ">
-        <Sidebar />
-        <div className="project-details-back-container">
-          <div className="back-container">
-            <Link to="/projects" className="back-option">
-              <MdOutlineArrowBackIosNew size={25} />
-            </Link>
-          </div>
-          <div className="project-heading-container">
-            <h1 className="project-heading">
-              Project Name :<span className="heading-text">{projectname}</span>
-            </h1>
-          </div>
-        </div>
+      <Header />
+      <div className="sidebar-project-details-container">
+        {GetSidebar()}
+        <div className="project-details-card ">
+          <div className="emp-details-container">
+            <div className="project-heading-container">
+              <h4 className="project-heading">
+                Project Name :
+                <span className="heading-text">&nbsp;{projectname}</span>
+              </h4>
+            </div>
+            <div className="emp-card">
+              <h1 className="team-heading">Scrum Master :</h1>
+              {data.map((e) => {
+                return <>{e.Role === "Scrum Master" && getDeptOrder(e)}</>;
+              })}
+            </div>
 
-        <div className="emp-card">
-          {data.map((e) => {
-            return (
-              <>
-                <li
-                  className="emp-card-item"
-                  style={{ borderTopColor: randomcolors() }}
-                >
-                  <img
-                    src="https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-vector-contact-symbol-illustration-184752213.jpg"
-                    alt="imagess"
-                    className="emp-image"
-                  />
-                  <div className="emp-card-details">
-                    <div className="emp-name-card">
-                      <h1 className="emp-name">Name:- &nbsp; </h1>
-                      <h1 className="emp-name">{e.Name}</h1>
-                    </div>
-                    <div className="emp-role-card">
-                      <h1 className="emp-role">Name:-&nbsp;</h1>
-                      <h1 className="emp-role">{e.Role}</h1>
-                    </div>
-                  </div>
-                </li>
-              </>
-            );
-          })}
+            <div className="emp-card">
+              <h4 className="team-heading">Development Team :</h4>
+              <div className="emp-name-card">
+                {data.map((e) => {
+                  return (
+                    <>{e.Team === "Full-Stack Developer" && getDeptOrder(e)}</>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="emp-card">
+              <h4 className="team-heading">QA Team :</h4>
+              <div className="emp-name-card">
+                {data.map((e) => {
+                  return <>{e.Team === "QA" && getDeptOrder(e)}</>;
+                })}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

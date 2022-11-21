@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   background-color: whitesmoke;
-  margin-bottom: 20px;
 }
 .website-logo {
     width: 110px;
@@ -19,7 +18,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1110px;
+    margin-left: 20px;
+    margin-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -56,6 +56,13 @@
     border: none;
     border-radius: 8px;
     margin-left: 14px;
+  }
+  
+  .profile-log-out-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:200px;
   }
   .logout-btn:hover {
     background-color: blueviolet;

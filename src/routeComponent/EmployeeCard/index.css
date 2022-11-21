@@ -1,46 +1,80 @@
-.dev-card-item{
-   display: flex;
-   justify-content: flex-start;
-   background-color: rgb(217, 201, 201);
-   padding: 10px;
-   list-style-type: none;
-   border-radius: 10px;
-   border-top: 5px solid #44c4a1;
-   box-shadow: 0px 3px 2px 0px;
-   max-height: 160px;
-   height:100%;
-   width:100%;
-   max-width:370px;
+.dev-card-item {
+  background-color: rgb(217, 201, 201);
+  height: 35vh;
+  width: 22vw;
+  list-style-type: none;
+  border-radius: 10px;
+  border-top: 5px solid #44c4a1;
+  box-shadow: 0px 3px 2px 0px;
 }
-.dev-image {
-   width: 80px;
-   height: 80px;
-   border-radius: 120px;
-   margin-top: 10px;
-   border: 2px solid black; 
-   margin-right: 20px;
-}
-.emp-card-details{
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: flex-start;
-}
-.emp-name-card{
-   display: flex;
-}
-.emp-role-card{
-   display: flex;
-   justify-content: flex-start;
-}
-.project_names_card {
-   display: flex;
- }
-.emp-heading {
-    font-size: 18px;
 
- }
- .emp-description{
-   font-size: 16px;
-   color:rgb(9, 105, 157);
- }
+.card_image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.name_heading {
+  margin-top: 30px;
+  color: black;
+  font-weight: 700;
+}
+
+.dev-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 120px;
+  margin-top: 10px;
+  border: 2px solid black;
+  margin-right: 20px;
+}
+.card_bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding: 10px;
+}
+.headings {
+  color: brown;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.role_heading {
+  color: black;
+  font-weight: 700;
+}
+.project_heading {
+  color: black;
+  font-weight: 700;
+}
+
+span {
+  color: brown;
+  font-weight: 500;
+  margin-left: 0px;
+}
+.card_project {
+  display: flex;
+  flex-direction: row;
+}
+.span_project {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 6vh;
+  overflow: hidden;
+}
+.anchor {
+  color: blue;
+  margin-left: 150px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+.anchor:hover {
+  color: rgb(70, 75, 71);
+}
