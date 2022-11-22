@@ -500,7 +500,6 @@
                 "Project": "Genie",
                 "Allocation": "30%"
               }
-
             ]
           }
         }
@@ -543,14 +542,14 @@
             "Client": "J&J",
             "Product_Owner": "Aravindha",
             "QA_Team": ["Sirisha", "Vijay Sai"],
-            "Development_Team": ["Nikhil","Saida Chary"],
+            "Development_Team": ["Nikhil", "Saida Chary"],
             "Technology": ["React", "P9"]
           }
         }
       },
       {
         "ID": "IAVR",
-        "Name": "IAVR",
+        "Name": "IAVR Enterprise",
         "Scrum_Master": "Garima",
         "Current_Sprint": "7",
         "Details": {
@@ -561,8 +560,14 @@
             "Sprint_Release_Date": "10/07/2022",
             "Client": "J&J",
             "Product_Owner": "Aravindha",
-            "QA_Team": ["Radika", "Sirisha","Sravani"],
-            "Development_Team": ["Nikhil", "Raushan", "Saida Chary", "Sai Srinvas","Lova Raju"],
+            "QA_Team": ["Radika", "Sirisha", "Sravani"],
+            "Development_Team": [
+              "Nikhil",
+              "Raushan",
+              "Saida Chary",
+              "Sai Srinvas",
+              "Lova Raju"
+            ],
             "Technology": ["React", "P9"]
           }
         }
@@ -581,7 +586,7 @@
             "Client": "J&J",
             "Product_Owner": "Aravindha",
             "QA_Team": ["Radika", "Sirisha", "Vijay Sai"],
-            "Development_Team": ["Raushan", "Saida Chary","Harsha Vardhan"],
+            "Development_Team": ["Raushan", "Saida Chary", "Harsha Vardhan"],
             "Technology": ["React", "P9"]
           }
         }
