@@ -6,7 +6,7 @@ import Switch from "@mui/material/Switch";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import IconButton from "@mui/material/IconButton";
-import AccountCircle from "@mui/icons-material/AccountCircle";
+//import AccountCircle from "@mui/icons-material/AccountCircle";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import "./index.css";
@@ -109,7 +109,7 @@ const Header = () => {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle />
+                {/*<AccountCircle />*/}
               </IconButton>
               <Menu
                 id="menu-appbar"
