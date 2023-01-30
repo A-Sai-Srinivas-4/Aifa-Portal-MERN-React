@@ -36,7 +36,8 @@
 }
 .project-heading {
   text-align: center;
-  color: #fff;
+  color: rgb(162, 10, 17);
+  font-size:50px;
 }
 .heading-text {
   font-size: 25px;
@@ -48,11 +49,9 @@
   color: skyblue;
 }
 .emp-card {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
+  min-height: 100vh;
 }
 
 .emp-card-item {
@@ -113,11 +112,13 @@
   justify-content: center;
   margin-top: 70px;
   background-color: rgb(170, 152, 205, 0.4);
-  border-radius: 5%;
+  border-radius: 0%;
   width: 60%;
-  height: 60%;
+  min-height: 100%;
 }
-.emp-card {
+
+.keys-values-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding: 10px;
 }

@@ -29,7 +29,7 @@ const App = () => {
             </Switch>
           </div>
         </div>
-        <Footer />
+       {/* <Footer />*/}
       </div>
     </>
   );

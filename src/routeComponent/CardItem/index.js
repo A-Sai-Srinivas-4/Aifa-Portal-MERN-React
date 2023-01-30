@@ -8,10 +8,10 @@ const CardItem = ({ details }) => {
   
 
   return (
-    <div class="container">
-      <div class="card">
-        <div class="box">
-          <div class="content">
+    <div className="container">
+      <div className="card">
+        <div className="box">
+          <div className="content">
             <Link
               to={`/project_details/${Name}`}
               className="card-link"

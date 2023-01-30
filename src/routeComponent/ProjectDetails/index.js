@@ -1,11 +1,30 @@
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Data from "../Json/data.json";
+//import Data from "../Json/data.json";
 import GetSidebar from "../Sidebar/Sidebar";
 import Header from "../Header";
+import GetData from "../GetData";
+import axios from "axios";
 import "./index.css";
 
 const ProjectDetails = ({ match }) => {
   const { projectname } = useParams();
+  const [Data1, setData] = useState([]);
+
+  const fetchData = () => {
+    axios.get(`http://localhost:8000/api/resources`).then((res) => {
+      const reso = res.data;
+      //console.log(reso.length);
+      setData(...reso);
+    });
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  //console.log(Data1);
+
+  //console.log(projectname)
 
   const myObj = {
     Emp_Details: {
@@ -38,38 +57,66 @@ const ProjectDetails = ({ match }) => {
   //console.log(projDetails)
 
   const fetchEmpData = () => {
-    Data.Resources.Empolyee_Details.map((each) =>
-      each.Details.Advance.Projects.map(
-        (e) =>
-          e.Project === projectname &&
-          myObj.Emp_Details.Name.push(each.Name) &&
-          myObj.Emp_Details.Role.push(each.Role) &&
-          myObj.Emp_Details.Team.push(each.Team)
-      )
-    );
+    //const list = [];
+    const tempObj = {};
 
-    return myObj;
+    Object.entries(Data1.Resources.Project_Details).map((e) => {
+      // const removeKey = Object.keys(e[1]).filter((k) => k === "Details");
+
+      //console.log(removeKey)
+
+      if (e[1].Name === projectname) {
+        for (let [key, value] of Object.entries(e[1])) {
+          if (key !== "Details") {
+            tempObj[key] = value;
+          } else {
+            for (let [key, value] of Object.entries(e[1].Details.Advance)) {
+              tempObj[key] = value;
+            }
+          }
+        }
+
+        // for (let [key, value] of Object.entries(
+        //   Data.Resources.Project_Details.map((each) => each.Details.Advance)[1]
+        // )) {
+        //   tempObj[key] = value;
+        // }
+
+        //  list.push(tempObj);
+      }
+    });
+
+    return tempObj;
   };
-  const Details = fetchEmpData();
-  console.log(Details);
 
-  var data = [];
+  var Details;
 
-  Details.Emp_Details.Role.forEach(
-    (Role, i) =>
-      (data = [
-        ...data,
-        {
-          Name: Details.Emp_Details.Name[i],
-          Role: Role,
-          Team: Details.Emp_Details.Team[i],
-        },
-      ])
-  );
+  if (Data1.Resources !== undefined) {
+    Details = fetchEmpData();
+    console.log(Data1);
+    console.log(Details);
+  }
+
+  //var data = [];
+
+  // Details.Emp_Details.Role.forEach(
+  //   (Role, i) =>
+  //     (data = [
+  //       ...data,
+  //       {
+  //         Name: Details.Emp_Details.Name[i],
+  //         Role: Role,
+  //         Team: Details.Emp_Details.Team[i],
+  //       },
+  //     ])
+  // );
 
   //console.log(data);
 
-  const getDeptOrder = (e) => <h1 className="emp-name">{e.Name}</h1>;
+  //const getDeptOrder = (e) => <h1 className="emp-name">{e.Name}</h1>;
+
+  //console.log(list);
+  //console.log(list1);
 
   return (
     <>
@@ -79,34 +126,11 @@ const ProjectDetails = ({ match }) => {
         <div className="project-details-card ">
           <div className="emp-details-container">
             <div className="project-heading-container">
-              <h4 className="project-heading">
-                Project Name :
-                <span className="heading-text">&nbsp;{projectname}</span>
-              </h4>
+              <h1 className="project-heading">{projectname}</h1>
             </div>
             <div className="emp-card">
-              <h1 className="team-heading">Scrum Master :</h1>
-              {data.map((e) => {
-                return <>{e.Role === "Scrum Master" && getDeptOrder(e)}</>;
-              })}
-            </div>
-
-            <div className="emp-card">
-              <h4 className="team-heading">Development Team :</h4>
-              <div className="emp-name-card">
-                {data.map((e) => {
-                  return (
-                    <>{e.Team === "Full-Stack Developer" && getDeptOrder(e)}</>
-                  );
-                })}
-              </div>
-            </div>
-            <div className="emp-card">
-              <h4 className="team-heading">QA Team :</h4>
-              <div className="emp-name-card">
-                {data.map((e) => {
-                  return <>{e.Team === "QA" && getDeptOrder(e)}</>;
-                })}
+              <div className="keys-values-container">
+                {Data1.Resources && <GetData Details={Details} />}
               </div>
             </div>
           </div>
