@@ -47,7 +47,7 @@ const GetData = ({ Details }) => {
   //   </div>
   // ));
 
-  return Object.entries(Details).map(([key, value]) => (
+  return Object.entries(Details).slice(1).map(([key, value]) => (
     <div key={key} className="key-value-card">
       {key.includes("_") ? (
         <>

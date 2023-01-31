@@ -1,30 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import CardItem from "../CardItem";
 //import Data from "../Json/data.json";
-import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchedData } from "../../redux/dataSlice";
+//import axios from "axios";
 import "./index.css";
 
 const ProjectData = () => {
-  const [Data1, setData] = useState([]);
+  //const [Data1, setData] = useState([]);
+  const Data = useSelector((state) => state.Data);
+  const dispatch = useDispatch();
 
-  const fetchData = () => {
-    axios.get(`http://localhost:8000/api/resources`).then((res) => {
-      const reso = res.data;
-      //console.log(reso.length);
-      setData(...reso);
-    });
-  };
+  // require('react-dom');
+  // window.React2 = require('react');
+  // console.log(window.React1 === window.React2);
+
+  console.log(Data.Data);
+
+  // const fetchData = () => {
+  //   axios.get(`http://localhost:8000/api/resources`).then((res) => {
+  //     const reso = res.data;
+  //     //console.log(reso.length);
+  //     setData(reso);
+  //   });
+  // };
   useEffect(() => {
-    fetchData();
-  }, []);
+    //fetchData();
+    dispatch(fetchedData());
+  }, [dispatch]);
 
   var Project_details;
-  if (Data1.Resources !== undefined) {
-    Project_details = Data1.Resources.Project_Details.map((eachItems) => {
+  if (Data.Data.Resources !== undefined) {
+    Project_details = Data.Data.Resources.Project_Details.map((eachItems) => {
       return eachItems;
     });
-    //console.log(Data1.Resources);
+    console.log(Data.Data.Resources);
 
     //console.log(Data);
     //console.log(Project_details);
@@ -45,7 +56,7 @@ const ProjectData = () => {
   return (
     <>
       <div className="project-cards-lists">
-        {Data1.Resources &&
+        {Data.Data.Resources &&
           Project_details.map((each) => {
             return <CardItem key={uuidv4()} details={each} />;
           })}

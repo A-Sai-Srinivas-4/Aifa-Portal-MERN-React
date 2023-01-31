@@ -6,6 +6,7 @@ import ProjectDetails from "./routeComponent/ProjectDetails";
 import Header from "./routeComponent/Header";
 import Footer from "./routeComponent/Footer";
 import NotFound from "./routeComponent/NotFound";
+//import {connect} from "react-redux"
 import "./App.css";
 import Sidebar from "./routeComponent/Sidebar/Sidebar";
 

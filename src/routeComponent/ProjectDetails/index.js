@@ -1,44 +1,53 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 //import Data from "../Json/data.json";
 import GetSidebar from "../Sidebar/Sidebar";
 import Header from "../Header";
 import GetData from "../GetData";
-import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchedData } from "../../redux/dataSlice";
+//import axios from "axios";
 import "./index.css";
 
 const ProjectDetails = ({ match }) => {
   const { projectname } = useParams();
-  const [Data1, setData] = useState([]);
+  //const [Data1, setData] = useState([]);
+  const Data = useSelector(state => state.Data)
+  const dispatch = useDispatch()
 
-  const fetchData = () => {
-    axios.get(`http://localhost:8000/api/resources`).then((res) => {
-      const reso = res.data;
-      //console.log(reso.length);
-      setData(...reso);
-    });
-  };
+  // const fetchData = () => {
+  //   axios.get(`http://localhost:8000/api/resources`).then((res) => {
+  //     const reso = res.data;
+  //     //console.log(reso.length);
+  //     setData(reso);
+  //   });
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
   useEffect(() => {
-    fetchData();
-  }, []);
+    //fetchData();
+    dispatch(fetchedData())
+  }, [dispatch]);
 
-  //console.log(Data1);
+  console.log(Data);
 
   //console.log(projectname)
 
-  const myObj = {
-    Emp_Details: {
-      Name: [],
-      Role: [],
-      Team: [],
-    },
-    Teams: {
-      Dev_Team: [],
-      QA_Team: [],
-    },
-    Scrum_Master: [],
-    Current_Sprint: [],
-  };
+  // const myObj = {
+  //   Emp_Details: {
+  //     Name: [],
+  //     Role: [],
+  //     Team: [],
+  //   },
+  //   Teams: {
+  //     Dev_Team: [],
+  //     QA_Team: [],
+  //   },
+  //   Scrum_Master: [],
+  //   Current_Sprint: [],
+  // };
 
   // const fetchProjectData = () => {
   //   Data.Resources.Project_Details.map(
@@ -60,7 +69,7 @@ const ProjectDetails = ({ match }) => {
     //const list = [];
     const tempObj = {};
 
-    Object.entries(Data1.Resources.Project_Details).map((e) => {
+    Object.entries(Data.Data.Resources.Project_Details).map((e) => {
       // const removeKey = Object.keys(e[1]).filter((k) => k === "Details");
 
       //console.log(removeKey)
@@ -91,9 +100,9 @@ const ProjectDetails = ({ match }) => {
 
   var Details;
 
-  if (Data1.Resources !== undefined) {
+  if (Data.Data.Resources !== undefined) {
     Details = fetchEmpData();
-    console.log(Data1);
+    console.log(Data);
     console.log(Details);
   }
 
@@ -130,7 +139,7 @@ const ProjectDetails = ({ match }) => {
             </div>
             <div className="emp-card">
               <div className="keys-values-container">
-                {Data1.Resources && <GetData Details={Details} />}
+                {Data.Data.Resources && <GetData Details={Details} />}
               </div>
             </div>
           </div>

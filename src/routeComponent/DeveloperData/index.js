@@ -1,34 +1,51 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 //import Data from "../Json/data.json";
 import EmployeeCard from "../EmployeeCard";
-import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchedData } from "../../redux/dataSlice";
+//import axios from "axios";
 import "./index.css";
 
 const DeveloperData = () => {
   const [search, setSearch] = useState("");
   const [devEmpList, setDevEmpList] = useState([]);
-  const [Data1, setData] = useState([]);
+  //const [Data1, setData] = useState([]);
   const [isDataLoaded, setDataLoaded] = useState(false);
+  const Data = useSelector(state => state.Data)
+  const dispatch = useDispatch()
 
-  async function fetchData() {
-    await axios.get(`http://localhost:8000/api/resources`).then((res) => {
-      const reso = res.data;
-      //console.log(reso.length);
-      setData(...reso);
-    });
-  }
+  // async function fetchData() {
+  //   await axios.get(`http://localhost:8000/api/resources`).then((res) => {
+  //     const reso = res.data;
+  //     //console.log(reso);
+  //     setData(reso);
+  //   });
+  // }
 
   //console.log(Data.Resources)
-  console.log(Data1);
+  //console.log(Data1);
+
   useEffect(() => {
-    fetchData();
-    console.log(devEmpList);
-    if (Data1.Resources !== undefined) {
-      setDevEmpList(Data1.Resources.Empolyee_Details);
+    //fetchData();
+    dispatch(fetchedData())
+    if (Data.Data.Resources !== undefined) {
+      //console.log(Data.Data.Resources.Employee_Details);
+      setDevEmpList(Data.Data.Resources.Employee_Details);
     }
-  }, []);
+  }, [dispatch]);
+
+  console.log(Data);
+  // useEffect(() => {
+  //   fetchData();
+  //   //console.log(devEmpList);
+  //   if (Data1.Resources !== undefined) {
+  //     //console.log(Data1.Resources.Employee_Details);
+  //     setDevEmpList(Data1.Resources.Employee_Details);
+  //   }
+    
+  // }, []);
 
   const renderSearchSection = () => (
     <div className="search-container">
@@ -42,24 +59,25 @@ const DeveloperData = () => {
     </div>
   );
 
-  console.log(devEmpList);
+  //console.log(devEmpList);
 
   const renderDevList = () => (
     <ul className="dev-cards-list">
-      {devEmpList
-        .filter((each) =>
-          each.Name.toLowerCase().includes(search.toLowerCase())
-        )
-        .map((eachCard) => (
-          <EmployeeCard cardDetails={eachCard} key={eachCard.id} />
-        ))}
+      {Data.Data.Resources !== undefined &&
+        devEmpList
+          .filter((each) =>
+            each.Name.toLowerCase().includes(search.toLowerCase())
+          )
+          .map((eachCard) => (
+            <EmployeeCard cardDetails={eachCard} key={eachCard.id} />
+          ))}
     </ul>
   );
 
   const showDevDetailsByOnSite = (event) => {
     const myArray = [];
-    if (Data1.Resources !== undefined) {
-      Data1.Resources.Empolyee_Details.map(
+    if (Data.Data.Resources !== undefined) {
+      Data.Data.Resources.Employee_Details.map(
         (each) =>
           each.Details.Advance.Offshore === event.target.value && [
             myArray.push(each),
@@ -74,8 +92,8 @@ const DeveloperData = () => {
 
   const showDevDetailsByOffshore = (event) => {
     const myArray = [];
-    if (Data1.Resources !== undefined) {
-      Data1.Resources.Empolyee_Details.map(
+    if (Data.Data.Resources !== undefined) {
+      Data.Data.Resources.Employee_Details.map(
         (each) =>
           each.Details.Advance.Offshore === event.target.value && [
             myArray.push(each),
@@ -89,8 +107,8 @@ const DeveloperData = () => {
 
   const showDevDetailsByRole = (event) => {
     const myArray = [];
-    if (Data1.Resources !== undefined) {
-      Data1.Resources.Empolyee_Details.map(
+    if (Data.Data.Resources !== undefined) {
+      Data.Data.Resources.Employee_Details.map(
         (each) => each.Role === event.target.value && [myArray.push(each)]
       );
       myArray.forEach((element) => {
@@ -100,16 +118,16 @@ const DeveloperData = () => {
   };
 
   const DropdownByOnSite = () => {
-    if (Data1.Resources !== undefined) {
+    if (Data.Data.Resources !== undefined) {
       const onsiteDetails = [
         ...new Set(
-          Data1.Resources.Empolyee_Details.map(
+          Data.Data.Resources.Employee_Details.map(
             (e) => e.Details.Advance.Offshore === "False" && "False"
           )
         ),
       ];
 
-      //console.log(onsiteDetails);
+      console.log(onsiteDetails);
 
       return (
         <div className="off-shore-button-container">
@@ -126,16 +144,16 @@ const DeveloperData = () => {
   };
 
   const DropdownByOffshore = () => {
-    if (Data1.Resources !== undefined) {
+    if (Data.Data.Resources !== undefined) {
       const offshoreDetails = [
         ...new Set(
-          Data1.Resources.Empolyee_Details.map(
+          Data.Data.Resources.Employee_Details.map(
             (e) => e.Details.Advance.Offshore && "True"
           )
         ),
       ];
 
-      //console.log(offshoreDetails);
+      console.log(offshoreDetails);
 
       return (
         <div className="off-shore-button-container">
@@ -152,9 +170,9 @@ const DeveloperData = () => {
   };
 
   const DropdownByRole = () => {
-    if (Data1.Resources !== undefined) {
+    if (Data.Data.Resources !== undefined) {
       const roleDetails = [
-        ...new Set(Data1.Resources.Empolyee_Details.map((e) => e.Role)),
+        ...new Set(Data.Data.Resources.Employee_Details.map((e) => e.Role)),
       ];
 
       //console.log(roleDetails)
@@ -185,11 +203,11 @@ const DeveloperData = () => {
     }
   };
 
-  console.log(Data1.Resources);
+  //console.log(Data.Data.Resources);
 
   return (
     <>
-      {Data1.Resources !== undefined && (
+      {Data.Data.Resources !== undefined && (
         <>
           <div className="dev-display-container">
             <div className="dropdown-container">
@@ -198,7 +216,7 @@ const DeveloperData = () => {
               {DropdownByOnSite()}
               <button
                 className="clear-btn"
-                onClick={() => setDevEmpList(Data1.Resources.Empolyee_Details)}
+                onClick={() => setDevEmpList(Data.Data.Resources.Employee_Details)}
               >
                 Clear
               </button>
@@ -209,7 +227,7 @@ const DeveloperData = () => {
           {renderDevList()}
           {!isDataLoaded &&
             setTimeout(() => {
-              setDevEmpList(Data1.Resources.Empolyee_Details);
+              setDevEmpList(Data.Data.Resources.Employee_Details);
               setDataLoaded(true);
             }, 1)}
         </>
@@ -219,3 +237,6 @@ const DeveloperData = () => {
 };
 
 export default DeveloperData;
+
+
+
